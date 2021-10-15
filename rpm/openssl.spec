@@ -74,7 +74,7 @@ Patch78: openssl-1.0.2k-cc-reqs.patch
 Patch90: openssl-1.0.2i-enc-fail.patch
 Patch92: openssl-1.0.2a-system-cipherlist.patch
 Patch93: openssl-1.0.2g-disable-sslv2v3.patch
-Patch94: openssl-1.0.2d-secp256k1.patch
+#Patch94: openssl-1.0.2d-secp256k1.patch
 Patch95: openssl-1.0.2e-remove-nistp224.patch
 Patch96: openssl-1.0.2e-speed-doc.patch
 #Patch99: openssl-1.0.2k-fips-randlock.patch
@@ -82,13 +82,18 @@ Patch96: openssl-1.0.2e-speed-doc.patch
 Patch80: openssl-1.0.2e-wrap-pad.patch
 Patch81: openssl-1.0.2a-padlock64.patch
 Patch82: openssl-1.0.2m-trusted-first-doc.patch
-Patch83: CVE-2018-0737.patch	
-Patch84: CVE-2018-0732.patch
-Patch85: CVE-2018-0734.patch
-Patch86: CVE-2019-1559.patch
+#Patch83: CVE-2018-0737.patch
+#Patch84: CVE-2018-0732.patch
+#Patch85: CVE-2018-0734.patch
+#Patch86: CVE-2019-1559.patch
 Patch87: CVE-2019-1547.patch
-Patch88: CVE-2019-1563.patch 
-Patch89: CVE-2019-1551.patch 
+Patch88: CVE-2019-1563.patch
+Patch89: CVE-2019-1551.patch
+# from OpenSuSE:
+Patch198: CVE-2021-23840.patch
+Patch199: CVE-2021-23841.patch
+
+
 # Mer patches
 Patch202: openssl-1.0.2d-remove-date-string.patch
 Patch204: openssl-1.0.2d-armtick.patch
@@ -202,7 +207,7 @@ from other formats to the formats used by the OpenSSL toolkit.
 %patch90 -p1 -b .enc-fail
 %patch92 -p1 -b .system
 %patch93 -p1 -b .v2v3
-%patch94 -p1 -b .secp256k1
+#%patch94 -p1 -b .secp256k1
 %patch95 -p1 -b .nistp224
 %patch96 -p1 -b .speed-doc
 #%patch99 -p1 -b .randlock
@@ -213,10 +218,14 @@ from other formats to the formats used by the OpenSSL toolkit.
 #%patch83 -p1 -b .2018-0737	
 #%patch84 -p1 -b .2018-0732
 #%patch85 -p1 -b .2018-0734
-%patch86 -p1 -b .2019-1559
-%patch87 -p1 -b .2019-1547
-%patch88 -p1 -b .2019-1563 
-%patch89 -p1 -b .2019-1551 
+#%patch86 -p1 -b .2019-1559
+#%patch87 -p1 -b .2019-1547
+#%patch88 -p1 -b .2019-1563 
+#%patch89 -p1 -b .2019-1551 
+
+%patch198 -p1 -b .2021-23840
+%patch199 -p1 -b .2021-23841
+
 
 %patch202 -p1 -b .date
 %patch204 -p1 -b .armtick
