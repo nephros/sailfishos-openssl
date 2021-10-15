@@ -49,7 +49,7 @@ Patch34: openssl-1.0.2a-x509.patch
 Patch35: openssl-1.0.2a-version-add-engines.patch
 #Patch39: openssl-1.0.2a-ipv6-apps.patch
 #Patch40: openssl-1.0.2m-fips.patch
-Patch43: openssl-1.0.2m-krb5keytab.patch
+#Patch43: openssl-1.0.2m-krb5keytab.patch
 Patch45: openssl-1.0.2a-env-zlib.patch
 Patch47: openssl-1.0.2a-readme-warning.patch
 Patch49: openssl-1.0.1i-algo-doc.patch
@@ -65,7 +65,7 @@ Patch68: openssl-1.0.2m-secure-getenv.patch
 #Patch70: openssl-1.0.2a-fips-ec.patch
 Patch71: openssl-1.0.2m-manfix.patch
 #Patch72: openssl-1.0.2a-fips-ctor.patch
-Patch73: openssl-1.0.2c-ecc-suiteb.patch
+#Patch73: openssl-1.0.2c-ecc-suiteb.patch
 Patch74: openssl-1.0.2j-deprecate-algos.patch
 Patch75: openssl-1.0.2a-compat-symbols.patch
 #Patch76: openssl-1.0.2j-new-fips-reqs.patch
@@ -182,7 +182,7 @@ from other formats to the formats used by the OpenSSL toolkit.
 %patch35 -p1 -b .version-add-engines
 #%patch39 -p1 -b .ipv6-apps
 #%patch40 -p1 -b .fips
-%patch43 -p1 -b .krb5keytab
+#%patch43 -p1 -b .krb5keytab
 %patch45 -p1 -b .env-zlib
 %patch47 -p1 -b .warning
 %patch49 -p1 -b .algo-doc
@@ -198,7 +198,7 @@ from other formats to the formats used by the OpenSSL toolkit.
 #%patch70 -p1 -b .fips-ec
 %patch71 -p1 -b .manfix
 #%patch72 -p1 -b .fips-ctor
-%patch73 -p1 -b .suiteb
+#%patch73 -p1 -b .suiteb
 #%patch74 -p1 -b .deprecate-algos
 #%patch75 -p1 -b .compat
 #%patch76 -p1 -b .fips-reqs
