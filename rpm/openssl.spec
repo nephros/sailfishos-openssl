@@ -319,7 +319,8 @@ export CPPFLAGS="$CPPFLAGS -D_FILE_OFFSET_BITS=64"
 # want to depend on the uninitialized memory as a source of entropy anyway.
 RPM_OPT_FLAGS="$RPM_OPT_FLAGS -Wa,--noexecstack -DPURIFY"
 make depend
-make all
+#make all
+make build_libs build_tools
 
 # Generate hashes for the included certs.
 make rehash
@@ -361,6 +362,8 @@ make -C test apps tests
 # Install OpenSSL.
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir},%{_mandir},%{_libdir}/openssl}
 # We don't need to install docs now because we don't package it.
+# remove apps so the recursive installer doesn't choke:
+rm -rf apps/
 make INSTALL_PREFIX=$RPM_BUILD_ROOT install_sw
 mv $RPM_BUILD_ROOT%{_libdir}/engines $RPM_BUILD_ROOT%{_libdir}/openssl
 rename so.%{soversion} so.%{version} $RPM_BUILD_ROOT%{_libdir}/*.so.%{soversion}
@@ -393,7 +396,7 @@ done
 
 # Pick a CA script.
 pushd  $RPM_BUILD_ROOT%{_sysconfdir}/pki/tls/misc
-mv CA.sh CA
+if [ -e CA.sh; then mv CA.sh CA; fi
 popd
 
 mkdir -m755 $RPM_BUILD_ROOT%{_sysconfdir}/pki/CA
