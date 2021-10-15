@@ -448,14 +448,16 @@ rm -rf $RPM_BUILD_ROOT/%{_libdir}/fipscanister.*
 %{_sysconfdir}/pki/tls/certs/make-dummy-cert
 %{_sysconfdir}/pki/tls/certs/renew-dummy-cert
 %{_sysconfdir}/pki/tls/certs/Makefile
-#%{_sysconfdir}/pki/tls/misc/CA
+# don't install dor now:
+# %%{_sysconfdir}/pki/tls/misc/CA
 %dir %{_sysconfdir}/pki/CA
 %dir %{_sysconfdir}/pki/CA/private
 %dir %{_sysconfdir}/pki/CA/certs
 %dir %{_sysconfdir}/pki/CA/crl
 %dir %{_sysconfdir}/pki/CA/newcerts
 %{_sysconfdir}/pki/tls/misc/c_*
-#%attr(0755,root,root) %{_bindir}/openssl
+# don't install dor now:
+# %%attr(0755,root,root) %{_bindir}/openssl
 
 %files libs
 %defattr(-,root,root)
@@ -469,8 +471,8 @@ rm -rf $RPM_BUILD_ROOT/%{_libdir}/fipscanister.*
 %attr(0755,root,root) /%{_lib}/libcrypto.so.%{soversion}
 %attr(0755,root,root) %{_libdir}/libssl.so.%{version}
 %attr(0755,root,root) %{_libdir}/libssl.so.%{soversion}
-%attr(0644,root,root) /%{_lib}/.libcrypto.so.*.hmac
-%attr(0644,root,root) %{_libdir}/.libssl.so.*.hmac
+# %%attr(0644,root,root) /%{_lib}/.libcrypto.so.*.hmac
+# %%attr(0644,root,root) %{_libdir}/.libssl.so.*.hmac
 %attr(0755,root,root) %{_libdir}/openssl
 
 %files devel
