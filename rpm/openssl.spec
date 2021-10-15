@@ -55,7 +55,7 @@ Patch47: openssl-1.0.2a-readme-warning.patch
 Patch49: openssl-1.0.1i-algo-doc.patch
 Patch50: openssl-1.0.2a-dtls1-abi.patch
 Patch51: openssl-1.0.2a-version.patch
-Patch56: openssl-1.0.2a-rsa-x931.patch
+#Patch56: openssl-1.0.2a-rsa-x931.patch
 #Patch58: openssl-1.0.2a-fips-md5-allow.patch
 Patch60: openssl-1.0.2a-apps-dgst.patch
 Patch63: openssl-1.0.2a-xmpp-starttls.patch
@@ -188,7 +188,7 @@ from other formats to the formats used by the OpenSSL toolkit.
 %patch49 -p1 -b .algo-doc
 %patch50 -p1 -b .dtls1-abi
 %patch51 -p1 -b .version
-%patch56 -p1 -b .x931
+#%patch56 -p1 -b .x931
 #%patch58 -p1 -b .md5-allow
 %patch60 -p1 -b .dgst
 %patch63 -p1 -b .starttls
