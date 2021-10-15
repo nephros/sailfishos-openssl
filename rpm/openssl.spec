@@ -47,7 +47,7 @@ Patch24: openssl-1.0.2a-issuer-hash.patch
 Patch33: openssl-1.0.0-beta4-ca-dir.patch
 Patch34: openssl-1.0.2a-x509.patch
 Patch35: openssl-1.0.2a-version-add-engines.patch
-Patch39: openssl-1.0.2a-ipv6-apps.patch
+#Patch39: openssl-1.0.2a-ipv6-apps.patch
 Patch40: openssl-1.0.2m-fips.patch
 Patch43: openssl-1.0.2m-krb5keytab.patch
 Patch45: openssl-1.0.2a-env-zlib.patch
@@ -175,8 +175,8 @@ cp %{SOURCE12} %{SOURCE13} crypto/ec/
 %patch33 -p1 -b .ca-dir
 %patch34 -p1 -b .x509
 %patch35 -p1 -b .version-add-engines
-%patch39 -p1 -b .ipv6-apps
-%patch40 -p1 -b .fips
+#%patch39 -p1 -b .ipv6-apps
+#%patch40 -p1 -b .fips
 %patch43 -p1 -b .krb5keytab
 %patch45 -p1 -b .env-zlib
 %patch47 -p1 -b .warning
@@ -184,19 +184,19 @@ cp %{SOURCE12} %{SOURCE13} crypto/ec/
 %patch50 -p1 -b .dtls1-abi
 %patch51 -p1 -b .version
 %patch56 -p1 -b .x931
-%patch58 -p1 -b .md5-allow
+#%patch58 -p1 -b .md5-allow
 %patch60 -p1 -b .dgst
 %patch63 -p1 -b .starttls
 %patch65 -p1 -b .chil
 %patch66 -p1 -b .pkgconfig
-%patch68 -p1 -b .secure-getenv
-%patch70 -p1 -b .fips-ec
+#%patch68 -p1 -b .secure-getenv
+#%patch70 -p1 -b .fips-ec
 %patch71 -p1 -b .manfix
-%patch72 -p1 -b .fips-ctor
+#%patch72 -p1 -b .fips-ctor
 %patch73 -p1 -b .suiteb
-%patch74 -p1 -b .deprecate-algos
-%patch75 -p1 -b .compat
-%patch76 -p1 -b .fips-reqs
+#%patch74 -p1 -b .deprecate-algos
+#%patch75 -p1 -b .compat
+#%patch76 -p1 -b .fips-reqs
 %patch77 -p1 -b .strength
 %patch78 -p1 -b .cc-reqs
 %patch90 -p1 -b .enc-fail
@@ -205,14 +205,14 @@ cp %{SOURCE12} %{SOURCE13} crypto/ec/
 %patch94 -p1 -b .secp256k1
 %patch95 -p1 -b .nistp224
 %patch96 -p1 -b .speed-doc
-%patch99 -p1 -b .randlock
+#%patch99 -p1 -b .randlock
 
-%patch80 -p1 -b .wrap
+#%patch80 -p1 -b .wrap
 %patch81 -p1 -b .padlock64
 %patch82 -p1 -b .trusted-first
-%patch83 -p1 -b .2018-0737	
-%patch84 -p1 -b .2018-0732
-%patch85 -p1 -b .2018-0734
+#%patch83 -p1 -b .2018-0737	
+#%patch84 -p1 -b .2018-0732
+#%patch85 -p1 -b .2018-0734
 %patch86 -p1 -b .2019-1559
 %patch87 -p1 -b .2019-1547
 %patch88 -p1 -b .2019-1563 
