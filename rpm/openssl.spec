@@ -330,32 +330,32 @@ for i in libcrypto.pc libssl.pc openssl.pc ; do
   sed -i '/^Libs.private:/{s/-L[^ ]* //;s/-Wl[^ ]* //}' $i
 done
 
-%check
-# Verify that what was compiled actually works.
-
-# We must revert patch33 before tests otherwise they will fail
-patch -p1 -R < %{PATCH33}
-
-LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export LD_LIBRARY_PATH
-OPENSSL_ENABLE_MD5_VERIFY=
-export OPENSSL_ENABLE_MD5_VERIFY
-make -C test apps tests
-%{__cc} -o openssl-thread-test \
-	-I./include \
-	$RPM_OPT_FLAGS \
-	%{SOURCE8} \
-	-L. \
-	-lssl -lcrypto \
-	-lpthread -lz -ldl
-./openssl-thread-test --threads %{thread_test_threads}
-
-# Add generation of HMAC checksum of the final stripped library
-%define __spec_install_post \
-    %{?__debug_package:%{__debug_install_post}} \
-    %{__arch_install_post} \
-    %{__os_install_post} \
-%{nil}
+#%check
+## Verify that what was compiled actually works.
+#
+## We must revert patch33 before tests otherwise they will fail
+#patch -p1 -R < %{PATCH33}
+#
+#LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+#export LD_LIBRARY_PATH
+#OPENSSL_ENABLE_MD5_VERIFY=
+#export OPENSSL_ENABLE_MD5_VERIFY
+#make -C test apps tests
+#%{__cc} -o openssl-thread-test \
+#	-I./include \
+#	$RPM_OPT_FLAGS \
+#	%{SOURCE8} \
+#	-L. \
+#	-lssl -lcrypto \
+#	-lpthread -lz -ldl
+#./openssl-thread-test --threads %{thread_test_threads}
+#
+## Add generation of HMAC checksum of the final stripped library
+#%define __spec_install_post \
+#    %{?__debug_package:%{__debug_install_post}} \
+#    %{__arch_install_post} \
+#    %{__os_install_post} \
+#%{nil}
 
 %install
 [ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
