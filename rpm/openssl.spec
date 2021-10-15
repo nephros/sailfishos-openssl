@@ -448,14 +448,14 @@ rm -rf $RPM_BUILD_ROOT/%{_libdir}/fipscanister.*
 %{_sysconfdir}/pki/tls/certs/make-dummy-cert
 %{_sysconfdir}/pki/tls/certs/renew-dummy-cert
 %{_sysconfdir}/pki/tls/certs/Makefile
-%{_sysconfdir}/pki/tls/misc/CA
+#%{_sysconfdir}/pki/tls/misc/CA
 %dir %{_sysconfdir}/pki/CA
 %dir %{_sysconfdir}/pki/CA/private
 %dir %{_sysconfdir}/pki/CA/certs
 %dir %{_sysconfdir}/pki/CA/crl
 %dir %{_sysconfdir}/pki/CA/newcerts
 %{_sysconfdir}/pki/tls/misc/c_*
-%attr(0755,root,root) %{_bindir}/openssl
+#%attr(0755,root,root) %{_bindir}/openssl
 
 %files libs
 %defattr(-,root,root)
