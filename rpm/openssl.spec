@@ -61,7 +61,7 @@ Patch60: openssl-1.0.2a-apps-dgst.patch
 Patch63: openssl-1.0.2a-xmpp-starttls.patch
 Patch65: openssl-1.0.2i-chil-fixes.patch
 Patch66: openssl-1.0.2h-pkgconfig.patch
-Patch68: openssl-1.0.2m-secure-getenv.patch
+#Patch68: openssl-1.0.2m-secure-getenv.patch
 #Patch70: openssl-1.0.2a-fips-ec.patch
 Patch71: openssl-1.0.2m-manfix.patch
 #Patch72: openssl-1.0.2a-fips-ctor.patch
@@ -70,7 +70,7 @@ Patch74: openssl-1.0.2j-deprecate-algos.patch
 Patch75: openssl-1.0.2a-compat-symbols.patch
 #Patch76: openssl-1.0.2j-new-fips-reqs.patch
 Patch77: openssl-1.0.2j-downgrade-strength.patch
-Patch78: openssl-1.0.2k-cc-reqs.patch
+#Patch78: openssl-1.0.2k-cc-reqs.patch
 Patch90: openssl-1.0.2i-enc-fail.patch
 Patch92: openssl-1.0.2a-system-cipherlist.patch
 Patch93: openssl-1.0.2g-disable-sslv2v3.patch
@@ -203,7 +203,7 @@ from other formats to the formats used by the OpenSSL toolkit.
 #%patch75 -p1 -b .compat
 #%patch76 -p1 -b .fips-reqs
 %patch77 -p1 -b .strength
-%patch78 -p1 -b .cc-reqs
+#%patch78 -p1 -b .cc-reqs
 %patch90 -p1 -b .enc-fail
 %patch92 -p1 -b .system
 %patch93 -p1 -b .v2v3
@@ -354,10 +354,6 @@ make -C test apps tests
     %{?__debug_package:%{__debug_install_post}} \
     %{__arch_install_post} \
     %{__os_install_post} \
-    crypto/fips/fips_standalone_hmac $RPM_BUILD_ROOT/%{_lib}/libcrypto.so.%{version} >$RPM_BUILD_ROOT/%{_lib}/.libcrypto.so.%{version}.hmac \
-    ln -sf .libcrypto.so.%{version}.hmac $RPM_BUILD_ROOT/%{_lib}/.libcrypto.so.%{soversion}.hmac \
-    crypto/fips/fips_standalone_hmac $RPM_BUILD_ROOT%{_libdir}/libssl.so.%{version} >$RPM_BUILD_ROOT%{_libdir}/.libssl.so.%{version}.hmac \
-    ln -sf .libssl.so.%{version}.hmac $RPM_BUILD_ROOT%{_libdir}/.libssl.so.%{soversion}.hmac \
 %{nil}
 
 %install
