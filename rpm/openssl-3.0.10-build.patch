@@ -1,0 +1,12 @@
+diff --git a/Configurations/10-main.conf b/Configurations/10-main.conf
+index 8010087b46..f9c8740c3e 100644
+--- a/Configurations/10-main.conf
++++ b/Configurations/10-main.conf
+@@ -772,6 +772,7 @@ my %targets = (
+         inherit_from     => [ "linux-generic64" ],
+         asm_arch         => 'aarch64',
+         perlasm_scheme   => "linux64",
++        multilib         => "64",
+     },
+     "linux-arm64ilp32" => {  # https://wiki.linaro.org/Platform/arm64-ilp32
+         inherit_from     => [ "linux-generic32" ],

@@ -45,7 +45,7 @@ Source12: ec_curve.c
 Source13: ectest.c
 Source14: fixpatch
 # Build changes
-Patch1: openssl-1.1.1-build.patch
+Patch1: openssl-3.0.10-build.patch
 Patch2: openssl-1.1.1-defaults.patch
 Patch3: openssl-1.1.1-no-html.patch
 Patch4: openssl-1.1.1-man-rename.patch
