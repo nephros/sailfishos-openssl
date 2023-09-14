@@ -52,7 +52,7 @@ Patch3: openssl-3.0.10-no-html.patch
 # Functionality changes
 Patch31: openssl-3.0.10-conf-paths.patch
 Patch32: openssl-3.0.10-version-add-engines.patch
-Patch33: openssl-1.1.1-apps-dgst.patch
+Patch33: openssl-3.0.10-apps-dgst.patch
 Patch36: openssl-1.1.1-no-brainpool.patch
 Patch37: openssl-1.1.1-ec-curves.patch
 Patch38: openssl-1.1.1-no-weak-verify.patch
