@@ -56,7 +56,7 @@ Patch33: openssl-3.0.10-apps-dgst.patch
 Patch36: openssl-3.0.10-no-brainpool.patch
 Patch37: openssl-3.0.10-ec-curves.patch
 #Patch38: openssl-1.1.1-no-weak-verify.patch
-Patch40: openssl-1.1.1-disable-ssl3.patch
+#Patch40: openssl-1.1.1-disable-ssl3.patch
 Patch41: openssl-1.1.1-system-cipherlist.patch
 Patch42: openssl-1.1.1-fips.patch
 Patch44: openssl-1.1.1-version-override.patch
@@ -168,7 +168,7 @@ cp %{SOURCE13} test/
 %patch36 -p1 -b .no-brainpool
 %patch37 -p1 -b .curves
 #%%patch38 -p1 -b .no-weak-verify
-%patch40 -p1 -b .disable-ssl3
+#%%patch40 -p1 -b .disable-ssl3
 %patch41 -p1 -b .system-cipherlist
 %patch42 -p1 -b .fips
 %patch44 -p1 -b .version-override
