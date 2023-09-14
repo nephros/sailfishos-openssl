@@ -96,7 +96,7 @@ BuildRequires: diffutils
 # /usr/bin/rename
 BuildRequires: util-linux
 # perl things:
-BuildRequires: perl-IPC-Cmd
+#BuildRequires: perl-IPC-Cmd # <- DoD...
 
 
 Requires: coreutils, make
