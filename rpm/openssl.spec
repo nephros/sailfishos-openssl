@@ -89,7 +89,8 @@ License: OpenSSL
 URL: http://www.openssl.org/
 BuildRequires: make
 BuildRequires: gcc 
-BuildRequires: coreutils, perl, sed, zlib-devel
+BuildRequires: coreutils, perl, sed
+BuildRequires: pkgconfig(zlib)
 BuildRequires: lksctp-tools-devel
 # /usr/bin/cmp
 BuildRequires: diffutils
