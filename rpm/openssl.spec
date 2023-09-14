@@ -50,7 +50,7 @@ Patch2: openssl-1.1.1-defaults.patch
 Patch3: openssl-3.0.10-no-html.patch
 #Patch4: openssl-1.1.1-man-rename.patch
 # Functionality changes
-Patch31: openssl-1.1.1-conf-paths.patch
+Patch31: openssl-3.0.10-conf-paths.patch
 Patch32: openssl-1.1.1-version-add-engines.patch
 Patch33: openssl-1.1.1-apps-dgst.patch
 Patch36: openssl-1.1.1-no-brainpool.patch
