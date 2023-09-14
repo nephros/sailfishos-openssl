@@ -160,7 +160,7 @@ cp %{SOURCE13} test/
 %patch1 -p1 -b .build   %{?_rawbuild}
 %patch2 -p1 -b .defaults
 %patch3 -p1 -b .no-html  %{?_rawbuild}
-%patch4 -p1 -b .man-rename
+#%%patch4 -p1 -b .man-rename
 
 %patch31 -p1 -b .conf-paths
 %patch32 -p1 -b .version-add-engines
