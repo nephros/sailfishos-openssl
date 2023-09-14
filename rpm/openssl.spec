@@ -95,6 +95,8 @@ BuildRequires: lksctp-tools-devel
 BuildRequires: diffutils
 # /usr/bin/rename
 BuildRequires: util-linux
+# perl things:
+BuildRequires: perl-IPC-Cmd
 
 
 Requires: coreutils, make
