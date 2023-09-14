@@ -88,7 +88,7 @@ Patch59: openssl-1_1-Optimize-AES-XTS-aarch64.patch
 License: OpenSSL
 URL: http://www.openssl.org/
 BuildRequires: make
-BuildRequires: gcc 
+BuildRequires: gcc
 BuildRequires: coreutils, perl, sed
 BuildRequires: pkgconfig(zlib)
 BuildRequires: pkgconfig(libsctp)
