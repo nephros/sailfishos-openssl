@@ -1,0 +1,30 @@
+diff --git a/Configure b/Configure
+index dd06aa4898..4fc5fd6c9a 100755
+--- a/Configure
++++ b/Configure
+@@ -3252,20 +3252,15 @@ sub which
+ {
+     my ($name)=@_;
+ 
+-    if (eval { require IPC::Cmd; 1; }) {
+-        IPC::Cmd->import();
+-        return scalar IPC::Cmd::can_run($name);
+-    } else {
+-        # if there is $directories component in splitpath,
+-        # then it's not something to test with $PATH...
+-        return $name if (File::Spec->splitpath($name))[1];
++    # if there is $directories component in splitpath,
++    # then it's not something to test with $PATH...
++    return $name if (File::Spec->splitpath($name))[1];
+ 
+-        foreach (File::Spec->path()) {
++    foreach (File::Spec->path()) {
+             my $fullpath = catfile($_, "$name$target{exe_extension}");
+             if (-f $fullpath and -x $fullpath) {
+-                return $fullpath;
++                    return $fullpath;
+             }
+-        }
+     }
+ }
+ 

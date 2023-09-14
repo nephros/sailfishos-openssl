@@ -48,6 +48,7 @@ Source14: fixpatch
 Patch1: openssl-3.0.10-build.patch
 Patch2: openssl-1.1.1-defaults.patch
 Patch3: openssl-3.0.10-no-html.patch
+Patch4: openssl-3.0.10-build-without-IPC.patch
 #Patch4: openssl-1.1.1-man-rename.patch
 # Functionality changes
 Patch31: openssl-3.0.10-conf-paths.patch
@@ -96,9 +97,6 @@ BuildRequires: pkgconfig(libsctp)
 BuildRequires: diffutils
 # /usr/bin/rename
 BuildRequires: util-linux
-# perl things:
-BuildRequires: perl-IPC-Cmd
-
 
 Requires: coreutils, make
 Requires: %{name}-libs%{?_isa} = %{version}-%{release}
@@ -164,6 +162,7 @@ cp %{SOURCE13} test/
 %patch1 -p1 -b .build   %{?_rawbuild}
 %patch2 -p1 -b .defaults
 %patch3 -p1 -b .no-html  %{?_rawbuild}
+%patch4 -p1 -b .no-ipc
 #%%patch4 -p1 -b .man-rename
 
 %patch31 -p1 -b .conf-paths
