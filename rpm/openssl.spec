@@ -16,9 +16,9 @@
 #       Adjust %{old_version} and %{old_soversion} accordingly!
 %bcond_with keep_oldversion_hack
 
-%define soversion 1.1
-%define old_version 1.0.2o+git5
-%define old_soversion 10
+%define soversion 3
+%define old_version 1.1.1v+git1
+%define old_soversion 1.1
 
 %define nofips 1
 
@@ -26,7 +26,7 @@
 %define thread_test_threads %{?threads:%{threads}}%{!?threads:1}
 Summary: Utilities from the general purpose cryptography library with TLS implementation
 Name: openssl
-Version: 1.1.1v
+Version: 3.0.10
 # Do not forget to bump SHLIB_VERSION on version upgrades
 Release: 1
 
